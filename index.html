@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<!-- https://learn.javascript.ru/regexp-character-classes -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rate of Fire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+<body>
+
+  <!-- pausedWrap -->
+  <div id="pausedWrap">paused</div>
+  <!-- pausedWrap -->
+
+  <div id="wrapper">
+    <!-- левая панель -->
+    <div id='panelBackg'>
+
+      <h2>Настройки</h2>
+
+      <div id="speed">
+        <form id="formSpeed">
+          <cite>выше</cite><input type="range" id="rangeSpeed" min="300" max="1200" value="600"><cite>ниже</cite>
+          <p>Текущая скорость<cite id="resultSpeed"> 600 </cite></p>
+        </form>
+
+        <form id="formSize">
+          <p style="font-weight: bold; color: red">Размер мишени</p>
+          <input type="range" id="rangeSize" min="30" max="100" value="80">
+          <p>Текущий размер<cite id="resulSize"> 80 </cite></p>
+        </form>
+      </div>
+
+      <ul id="selectionPanel">
+
+        <li id="game-mode" class="elemsStyle">
+          <p>Game mode</p>
+          <button class="mode activeColor" value="10" style="transform: skew(-20deg);">Обычный режим</button>
+          <button class="mode" value="99999" style="transform: skew(-20deg);">Режим бога</button>
+        </li>
+
+        <li id="gameCursor" class="elemsStyle">
+          <p>Сменить прицел</p>
+          <button value='1small.cur' class="blockSizeMiniature bgSmallCursor"></button>
+          <button value='1medium.cur' class="blockSizeMiniature bgMediumCursor"></button>
+          <button value='1big.cur' class="blockSizeMiniature bgBigCursor"></button>
+
+          <div id="colorGameCursor">
+            <button class="colorGameCursor" style="background-color: green; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: red; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: yellow; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: blue; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: orange; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: black; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: white; width:15px; height: 15px;"></button>
+            <button class="colorGameCursor" style="background-color: pink; width:15px; height: 15px;"></button>
+          </div>
+        </li>
+
+        <li id="targetBackground">
+          <p>Сменить мишень</p>
+        </li>
+
+        <li id="screenBackground">
+          <p>Сменить фон экранна</p>
+        </li>
+
+        <li id="gameFieldBackground">
+          <p>Сменить фон ировой зоны</p>
+        </li>
+      </ul>
+
+      <h3 style="color: red"> P <i style="color: #fff;font-style: normal;">или</i> SPACE<span style="color: #fff"> -
+          ПАУЗА</span></h3>
+    </div>
+    <!-- левая панель -->
+
+
+    <!-- Игровая зона -->
+    <section id='fieldGame'></section>
+    <!-- Игровая зона -->
+
+    <div id="wrapPanelNav">
+      <div id="logo">
+        <a href="#"><img src="logo/logo.png" alt="img"></a>
+      </div>
+
+      <!-- правая панель -->
+      <div id='panelNav'>
+
+        <div id="timeSeconds">
+          <span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span>
+        </div>
+
+        <div id='tablo'>
+          <p>Попадания<span id='hit'>0</span></p>
+          <p>Промахи<span id='miss'>0</span></p>
+          <p><img src="./nav/life.png" alt="life" width="30px" id="lifeSrc"><span id='life'
+              style="color: green;">10</span>
+          </p>
+        </div>
+
+        <div id='nav'>
+          <button id="btnStart"></button>
+          <button id="btnStop"></button>
+        </div>
+      </div>
+
+    </div>
+    <!-- правая панель -->
+  </div>
+
+
+  <script src="js.js"></script>
+</body>
+
+</html>
