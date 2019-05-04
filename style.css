@@ -108,7 +108,7 @@ form{
     z-index: 1
 }
 
-#fieldGame::after{
+/* #fieldGame::after{
     content: '';
     position: absolute;
     left: 0;
@@ -118,7 +118,7 @@ form{
     background: url(egg.gif) no-repeat 0/cover;
     z-index: -1
 
-}
+} */
 
 
 #speed p{
